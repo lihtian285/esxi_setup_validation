@@ -1,4 +1,4 @@
-###author : lih-tian.lim@hpe.com###
+###author : lihtian@gmail.com###
 ###check-esxi.ps1###
 ###Created date : 28 July 2017###
 ###Version 1.0###
@@ -32,7 +32,7 @@ Function Connect-vCenter
 		if ($defaultVIServer.count -gt 0){
 
 		Disconnect-VIServer -server $defaultVIServer -Confirm:$false
-		$vcenter = Read-host 'Enter Vcenter name. Eg: UKCDVMGVC001: '
+		$vcenter = Read-host 'Enter Vcenter name: '
 		$passwd = Get-Credential
 		Connect-VIServer -server $vcenter -Credential $passwd
 		}
@@ -40,7 +40,7 @@ Function Connect-vCenter
 
 		Else{
 
-		$vcenter = Read-host 'Enter Vcenter name. Eg: UKCDVMGVC001: '
+		$vcenter = Read-host 'Enter Vcenter name: '
 		$passwd = Get-Credential
 		Connect-VIServer -server $vcenter -Credential $passwd
 
@@ -67,7 +67,7 @@ $vmhost = get-vmhost -name $esxifullhostname
 #Get syslog IP
 $datacenter = get-datacenter | select-object -expandproperty name
 $4char = $datacenter.substring(0,4)
-$syslogserver = $4char + "VCCUS001"
+$syslogserver = "yoursyslogserver"
 $syslogip = (nslookup $syslogserver | select-string Address | where-object LineNumber -eq 5).tostring().split(' ')[-1]
 
 #Getting vmhost ID for get-view purpose
