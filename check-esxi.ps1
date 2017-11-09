@@ -1,6 +1,6 @@
 ##Testing the fork###
 ###author : lihtian@gmail.com###
-## update the fork###
+## update the for 2k###
 ###check-esxi.ps1###
 ###Created date : 28 July 2017###
 ###Version 1.0###
