@@ -1,7 +1,4 @@
-##Testing the fork 3 ###
-##Testing the fork 4 ###
 ###author : lihtian@gmail.com###
-## update the fork 3 ###
 ###check-esxi.ps1###
 ###Created date : 28 July 2017###
 ###Version 1.0###
