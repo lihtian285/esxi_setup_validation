@@ -1,4 +1,4 @@
-# esxi_setup_validation-
+# esxi setup validation
 
 Item to check :
 1.	ESXi hostname
